@@ -10,7 +10,7 @@ export const UseStateExample = () => {
     }
   return (
     <>
-      <h1>Every Click The Number Will Increase : {count}</h1>
+      <h1>Everytime you Click The button Will Increase/Decrease : {count}</h1>
       {/* <button onClick={() => setcount(count + 1)}>add</button>
       <button onClick={() => setcount(count - 1)}>sub</button> */}
       <button onClick={() => addHandeler()}>add</button>
@@ -18,5 +18,3 @@ export const UseStateExample = () => {
     </>
   )
 }
-
-

@@ -15,8 +15,8 @@ root.render(
   <React.StrictMode>
    {/* <Test1/>
    <Test2/>
-   <Test3/>
-   <FunctionTest/> */}
+   <Test3/> */}
+   {/* <FunctionTest/> */}
    <EmployeeDetails/>
    <UseStateExample/>
   </React.StrictMode>
