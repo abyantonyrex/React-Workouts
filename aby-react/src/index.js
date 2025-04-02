@@ -5,8 +5,9 @@ import './index.css';
 // import {FunctionTest} from './components/FunctionBased';
 import reportWebVitals from './reportWebVitals';
 // import Employee from './components/Employee';
-import EmployeeDetails from './components/EmployeeDetails';
-import { UseStateExample } from './components/UseStateExample';
+// import EmployeeDetails from './components/EmployeeDetails';
+import { UseStateExample1 } from './components/UseStateExample';
+import { UseStateExample2 } from './components/UseStateExample';
 
 
 
@@ -17,8 +18,10 @@ root.render(
    <Test2/>
    <Test3/> */}
    {/* <FunctionTest/> */}
-   <EmployeeDetails/>
-   <UseStateExample/>
+   {/* <EmployeeDetails/> */}
+   <UseStateExample1/>
+   <UseStateExample2/>
+  
   </React.StrictMode>
 );
 
