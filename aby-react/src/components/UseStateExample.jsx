@@ -70,9 +70,6 @@ export const UseStateExample2 = () => {
           return <h1> The Selected Course is {value}</h1>
         })
       }
-      
-      
-
     </>
   )
 }
