@@ -5,7 +5,13 @@ import "./index.css";
 // import {FunctionTest} from './components/FunctionBased';
 import reportWebVitals from "./reportWebVitals";
 // import { Component1 } from "./PropsDrilling/Component1";
-import { Component1 } from "./UseContext/Component1"
+// import { Component1 } from "./UseContext/Component1"
+// import { ColorChange } from "./UseReference examples/ColorChange";
+// import { StoreRef } from "./UseReference examples/StoreRef";
+// import { SlowMemo } from "./UseMemo/SlowMemo";
+// import { UseCallBackExample } from "./UseCallBack/UseCallBackExample";
+// import { UseReducerProblem } from "./UseReducer/UseReducerProblem";
+import { UseReducerproblem2 } from "./UseReducer/UseReducerproblem2";
 // import { InputUseState } from "./components/InputUseState";
 // import { InputMapUsingUsestate2 } from "./components/InputMapUsingUsestate";
 // import { UseEffectsExample } from "./components/UseEffectsExample";
@@ -28,8 +34,14 @@ root.render(
     <InputUseState />
     <InputMapUsingUsestate2/>
     <UseEffectsExample/>
-    <Component1/>*/}
     <Component1/>
+    <Component1/>
+    <ColorChange/>
+    <StoreRef/>
+    <SlowMemo/>
+    <UseCallBackExample/>
+    <UseReducerProblem/>*/}
+    <UseReducerproblem2/>
   </React.StrictMode>
 );
 
