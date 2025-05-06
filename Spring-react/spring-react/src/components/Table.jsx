@@ -1,13 +1,38 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 export const Table = () => {
 let [database,setdatabase] = useState([])
+let nav = useNavigate()
+let location = useLocation()
+let param = new URLSearchParams(location.search)
+let searchName = param.get("userSearchName")
 
 useEffect(()=> {
-  axios.get("http://localhost:8080/manager/displayAllUser")
+  if (searchName && searchName!=="") {
+axios.get(`http://localhost:8080/manager/DisplayUser/${searchName}`)
+.then(res=>{
+  if(res.data.length>0){
+    setdatabase(res.data)
+  }
+  else{
+    alert(`The User ${searchName}is not Found`)
+  }
+})
+  }
+  else{
+    axios.get("http://localhost:8080/manager/displayAllUser")
   .then(res=>setdatabase(res.data))
-},[])
+  }
+},[location,searchName])
+
+function deleteHandeler(id) {
+  axios.delete(`http://localhost:8080/manager/deleteUser/${id}`)
+  .then(()=>{
+    window.location.reload()
+    alert("User Deleted Successfully")})
+}
 
   return (
    
@@ -33,9 +58,9 @@ useEffect(()=> {
           <td>{value.password}</td>
           <td>{value.location}</td>
           <td>
-          <button type="button" class="btn btn-outline-primary mx-2">View</button>
-          <button type="button" class="btn btn-outline-warning mx-2">Edit</button>
-          <button type="button" class="btn btn-outline-danger mx-2">Delete</button>
+          <button type="button" class="btn btn-outline-primary mx-2" onClick={()=> {nav(`/view/${value.id}`)}}>View</button>
+          <button type="button" class="btn btn-outline-warning mx-2" onClick={()=> {nav(`/edit/${value.id}`)}}>Edit</button>
+          <button type="button" class="btn btn-outline-danger mx-2" onClick={()=>deleteHandeler(value.id)}>Delete</button>
           </td>
           </tr>
         })
