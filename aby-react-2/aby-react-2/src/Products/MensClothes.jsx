@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import './Television.css'
 import { useLocation, useNavigate} from 'react-router-dom'
+
+let database = [
+    {Name: 'Mens' , Desc: 'acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)', Price: '30,000', ShippingCost: 'free delivery', img:'/img/acer-Tv.png'},
+    {Name: 'Hisense TV' , Desc: 'Hisense 139 cm (55 inches) E6N Series 4K Ultra HD Smart LED Google TV 55E6N (Black)', Price: '35,000', ShippingCost: '+$5 shipping', img:'/img/Hisense-Tv.png'},
+    {Name: 'Lg TV' , Desc: 'LG 139 cm (55 inches) 4K Ultra HD Smart LED TV 55UR7500PSC (Dark Iron Gray)', Price: '40,000', ShippingCost: 'free delivery', img:'/img/Lg-Tv.png'},
+    {Name: 'Samsung TV' , Desc: 'Samsung 138 cm (55 inches) 4K Ultra HD Smart LED TV UA55DUE70BKLXL (Black)', Price: '50,000', ShippingCost: '+$7 shipping', img:'/img/Samsung-Tv.png'},
+    {Name: 'Tcl TV' , Desc: 'TCL 139 cm (55 inches) 4K Ultra HD Smart QLED Google TV 55P71B Pro (Black)', Price: '45,000', ShippingCost: 'free delivery', img:'/img/Tcl-Tv.png'},
+    {Name: 'Vu TV' , Desc: 'Vu 139cm (55 inches) Vibe Series QLED 4K Google TV 55VIBE24 (Black)', Price: '32,000', ShippingCost: '+$8 shipping', img:'/img/Vw-Tv.png'}
+]
 export const MensClothes = () => {
   let location = useLocation()
   let param = new URLSearchParams(location.search)
@@ -20,14 +29,6 @@ export const MensClothes = () => {
      
    let [filteredData,setfilteredData] = useState([])
 
-    let database = [
-        {Name: 'Mens' , Desc: 'acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)', Price: '30,000', ShippingCost: 'free delivery', img:'/img/acer-Tv.png'},
-        {Name: 'Hisense TV' , Desc: 'Hisense 139 cm (55 inches) E6N Series 4K Ultra HD Smart LED Google TV 55E6N (Black)', Price: '35,000', ShippingCost: '+$5 shipping', img:'/img/Hisense-Tv.png'},
-        {Name: 'Lg TV' , Desc: 'LG 139 cm (55 inches) 4K Ultra HD Smart LED TV 55UR7500PSC (Dark Iron Gray)', Price: '40,000', ShippingCost: 'free delivery', img:'/img/Lg-Tv.png'},
-        {Name: 'Samsung TV' , Desc: 'Samsung 138 cm (55 inches) 4K Ultra HD Smart LED TV UA55DUE70BKLXL (Black)', Price: '50,000', ShippingCost: '+$7 shipping', img:'/img/Samsung-Tv.png'},
-        {Name: 'Tcl TV' , Desc: 'TCL 139 cm (55 inches) 4K Ultra HD Smart QLED Google TV 55P71B Pro (Black)', Price: '45,000', ShippingCost: 'free delivery', img:'/img/Tcl-Tv.png'},
-        {Name: 'Vu TV' , Desc: 'Vu 139cm (55 inches) Vibe Series QLED 4K Google TV 55VIBE24 (Black)', Price: '32,000', ShippingCost: '+$8 shipping', img:'/img/Vw-Tv.png'}
-    ]
 
     const CardTemplate = (props) => {
         return (

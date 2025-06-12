@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+// import App from './App';
 import { WeatherProvider } from './WeatherContext';
 import reportWebVitals from './reportWebVitals';
+// import FeedbackSystem from './components/Counter';
+import PostDisplay from './components/BlogSpot';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <WeatherProvider>
-      <App />
+      {/* <App /> */}
+      <PostDisplay/>
     </WeatherProvider>
   </React.StrictMode>
 );

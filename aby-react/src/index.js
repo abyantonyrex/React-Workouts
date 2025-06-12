@@ -3,14 +3,16 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 import reportWebVitals from "./reportWebVitals";
-import { UseFormExample } from "./UseForm/UseFormExample";
+// import { UseFormExample } from "./UseForm/UseFormExample";
+import { Component1 } from "./UseContext/Component1";
 
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <UseFormExample/>
+    {/* <UseFormExample/> */}
+    <Component1/>
   </React.StrictMode>
 );
 

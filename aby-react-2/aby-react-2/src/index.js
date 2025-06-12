@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { MainRoot } from './main/MainRoot';
+import { MainRoot } from './main/MainRoot';
 // import { MainFile } from './Redux/MainFile';
-import { ApiCall } from './Api/ApiCall';
+// import { ApiCall } from './Api/ApiCall';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-     {/* <MainRoot/> */}
+     <MainRoot/>
      {/* <MainFile/> */}
-     <ApiCall/>
+     {/* <ApiCall/> */}
   </React.StrictMode>
 );
 
