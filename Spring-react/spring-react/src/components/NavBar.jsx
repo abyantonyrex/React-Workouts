@@ -16,7 +16,7 @@ export const NavBar = () => {
     <div className='sticky-top mb-3'>
      <nav className="navbar navbarMain" >
   <div className="container-fluid">
-    <a className="navbar-brand" href="/">Navbar</a>
+    <a className="navbar-brand" href="/">UserFlow - User Management System</a>
     <form className="d-flex" onSubmit={(e)=> searchHandeler(e)}>
       <input className="form-control me-2 p-1" type="search" placeholder="Search" aria-label="Search"
        onChange={(e)=> setSearchName(e.target.value)}/>
