@@ -8,9 +8,10 @@ import { ViewPage } from './components/viewPage';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-dark text-white vh-100">
       <BrowserRouter>
       <NavBar/>
+
       <Routes>
         <Route path="/" element={<Table/>} />
         <Route path="/add" element={<AddUser/>} />

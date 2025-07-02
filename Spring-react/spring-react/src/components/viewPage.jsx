@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
+import Card from './Card'
 
 export const ViewPage = () => {
   let [username, setuserName] = useState("")
@@ -16,7 +17,7 @@ export const ViewPage = () => {
   
 
   useEffect(()=> {
-    axios.get(`http://localhost:8080/manager/getById/${id}`)
+    axios.get(`https://abyantonyrex-springboot-project.onrender.com/manager/getById/${id}`)
     .then(res=> {
         setuserName(res.data.name)
         setuserUserName(res.data.userName)
@@ -27,7 +28,7 @@ export const ViewPage = () => {
 
   return (
         <>
-         <h1>The Details of User {username}</h1>
+         {/* <h1>The Details of User {username}</h1>
     <div className='d-flex flex-column align-items-center justify-content-center bg-warningdark vh-full'>
      <div className='d-flex flex-column align-items-center justify-content-center mt-5 rounded bg-info border p-4 fw-bold shadow w-50 m-auto '>
         <p className='fs-3 fw-bold p-4 text-dark '>The Name is {username}</p>
@@ -36,7 +37,8 @@ export const ViewPage = () => {
         <p className='fs-3 fw-bold p-4 text-dark '>The User location is {userlocation}</p>
       <button type="button" className="btn btn-danger " width ="25px" onClick={() => {nav('/'); }}>Back to Home</button>
      </div>
-    </div>
+    </div> */}
+         <Card username={username} userUserName={userUserName} userpassword={userpassword} userlocation={userlocation} nav={nav}/>
         </>
   )
 }

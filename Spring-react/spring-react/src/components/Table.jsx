@@ -11,7 +11,7 @@ let searchName = param.get("userSearchName")
 
 useEffect(()=> {
   if (searchName && searchName!=="") {
-axios.get(`http://localhost:8080/manager/DisplayUser/${searchName}`)
+axios.get(`https://abyantonyrex-springboot-project.onrender.com/manager/DisplayUser/${searchName}`)
 .then(res=>{
   if(res.data.length>0){
     setdatabase(res.data)
@@ -22,13 +22,13 @@ axios.get(`http://localhost:8080/manager/DisplayUser/${searchName}`)
 })
   }
   else{
-    axios.get("http://localhost:8080/manager/displayAllUser")
+    axios.get("https://abyantonyrex-springboot-project.onrender.com/manager/displayAllUser")
   .then(res=>setdatabase(res.data))
   }
 },[location,searchName])
 
 function deleteHandeler(id) {
-  axios.delete(`http://localhost:8080/manager/deleteUser/${id}`)
+  axios.delete(`https://abyantonyrex-springboot-project.onrender.com/manager/deleteUser/${id}`)
   .then(()=>{
     window.location.reload()
     alert("User Deleted Successfully")})

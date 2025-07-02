@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../index.css'
 import { useNavigate } from 'react-router-dom'
 export const NavBar = () => {
   let [searchName,setSearchName] = useState("")
@@ -10,13 +11,10 @@ export const NavBar = () => {
     nav(`/?${param.toString()}`)
   }
  
-  const gradientStyle = {
-    background: 'skyblue'
-  };
 
   return (
-    <div>
-     <nav className="navbar navbar-light" style={gradientStyle}>
+    <div className='sticky-top mb-3'>
+     <nav className="navbar navbarMain" >
   <div className="container-fluid">
     <a className="navbar-brand" href="/">Navbar</a>
     <form className="d-flex" onSubmit={(e)=> searchHandeler(e)}>

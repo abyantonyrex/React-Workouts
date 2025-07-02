@@ -12,14 +12,19 @@ export const AddUser = () => {
   let nav = useNavigate()
 
   function addHandeler() {
-    axios.post("http://localhost:8080/manager/addSingleUser",{
-      name:name,
-      userName:userName,
-      password:password,
-      location:location
-    })
-    .then(() => nav("/"))
-  }
+  axios.post("https://abyantonyrex-springboot-project.onrender.com/manager/addSingleUser", {
+    name: name,
+    userName: userName,
+    password: password,
+    location: location
+  })
+  .then(() => nav("/"))
+  .catch((err) => {
+    console.error("Error adding user:", err);
+    alert("Failed to add user. Check console for error.");
+  });
+}
+
 
   return (
     

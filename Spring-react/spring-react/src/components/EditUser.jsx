@@ -14,7 +14,7 @@ export const EditUser = () => {
   let {id} = useParams()
 
   function editHandeler() {
-    axios.put(`http://localhost:8080/manager/editById/${id}`, {
+    axios.put(`https://abyantonyrex-springboot-project.onrender.com/manager/editById/${id}`, {
       name: username,
       userName: userUserName,
       password: userpassword,
@@ -29,7 +29,7 @@ export const EditUser = () => {
   
 
   useEffect(()=> {
-    axios.get(`http://localhost:8080/manager/getById/${id}`)
+    axios.get(`https://abyantonyrex-springboot-project.onrender.com/manager/getById/${id}`)
     .then(res=> {
         setuserName(res.data.name)
         setuserUserName(res.data.userName)
@@ -80,7 +80,7 @@ export const EditUser = () => {
           type="text"
           className="form-control"
           id="location"
-          value={userpassword}
+          value={userlocation}
           onChange={(e) => setuserLocation(e.target.value)}
         />
 
